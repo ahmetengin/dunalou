@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 interface DialogProps {
   open: boolean;
-  onClose: (value: boolean) => void;
   children: React.ReactNode;
   as?: React.ElementType;
   className?: string;
@@ -16,7 +15,7 @@ interface DialogPanelProps {
   className?: string;
 }
 
-const Dialog = ({ open, onClose, children, className = '', as = 'div' }: DialogProps) => {
+const Dialog = ({ open, children, className = '', as = 'div' }: DialogProps) => {
   const Component = as;
 
   React.useEffect(() => {
